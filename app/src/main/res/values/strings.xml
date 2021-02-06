@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Upload Image</string>
+    <string name="email_error">Please Enter Your Email address</string>
+    <string name="password_error">Please Enter Password</string>
+    <string name="cpassword_error">Password Didn\'t Match</string>
+    <string name="password_error_invalid">Please enter a minimum password of 6 characters</string>
 </resources>
