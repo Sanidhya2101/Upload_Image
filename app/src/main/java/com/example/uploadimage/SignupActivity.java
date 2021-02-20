@@ -3,6 +3,7 @@ package com.example.uploadimage;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.HashMap;
+
 public class SignupActivity extends AppCompatActivity {
     private EditText email,password,cpassword;
     private FirebaseAuth fauth;
@@ -24,6 +27,7 @@ public class SignupActivity extends AppCompatActivity {
     private boolean isemail,ispassword,iscpassword;
     private TextInputLayout emailError,passwordError,cpasswordError;
     private TextView login;
+    private ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,7 @@ public class SignupActivity extends AppCompatActivity {
         passwordError = findViewById(R.id.S_errorpassword);
         cpasswordError = findViewById(R.id.S_errorcpassword);
         login = findViewById(R.id.textlogin);
-
+        pd = new ProgressDialog(this);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +108,9 @@ public class SignupActivity extends AppCompatActivity {
 
                 if(isemail && ispassword && iscpassword)
                 {
+                    pd.setMessage("Registering Please Wait.");
+                    pd.show();
+                    pd.setCancelable(false);
                     authenticate(email_txt,password_txt);
                 }
             }
@@ -115,8 +122,10 @@ public class SignupActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        Toast.makeText(SignupActivity.this,"You have been Successfully registered",Toast.LENGTH_SHORT).show();
+                        pd.dismiss();
+                        Toast.makeText(SignupActivity.this,"Tou have been successfully registered",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(SignupActivity.this,HomeActivity.class));
+
                         finish();
                     }
                 })
@@ -124,7 +133,10 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(SignupActivity.this,"Error : "+e.getMessage(),Toast.LENGTH_SHORT).show();
+                        pd.dismiss();
                     }
                 });
     }
+
+
 }

@@ -23,7 +23,22 @@
             android:layout_gravity="center"
             android:gravity="center">
 
-    <ImageButton
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Image"
+                android:textSize="50sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#0021FB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold" />
+
+
+
+            <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image"
@@ -33,17 +48,30 @@
         android:scaleType="fitCenter"
         android:src="@drawable/imageadd"/>
 
-            <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Logout"
-        android:textSize="20dp"
-        android:textAllCaps="false"
-        android:id="@+id/logout"
 
-        android:background="@drawable/custom_button"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Upload"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:id="@+id/upload"
+                android:background="@drawable/custom_button"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Logout"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:id="@+id/logout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button"/>
+
 
 
         </LinearLayout>

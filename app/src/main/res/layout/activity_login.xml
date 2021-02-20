@@ -8,6 +8,18 @@
     android:background="@drawable/custom_background"
     android:focusableInTouchMode="true"
     android:descendantFocusability="beforeDescendants">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="50sp"
+        android:layout_marginTop="100dp"
+        android:textColor="#0021FB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold" />
+
 
     <LinearLayout
         android:layout_width="match_parent"

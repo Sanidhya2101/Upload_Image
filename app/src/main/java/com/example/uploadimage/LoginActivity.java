@@ -3,6 +3,7 @@ package com.example.uploadimage;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isemail,ispassword;
     private TextInputLayout emailError,passwordError;
     private TextView signup;
+    private ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         emailError = findViewById(R.id.L_erroremail);
         passwordError = findViewById(R.id.L_errorpassword);
         signup = findViewById(R.id.create_one);
+        pd = new ProgressDialog(this);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +79,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(isemail && ispassword)
                 {
+                    pd.setMessage("Verifying Please Wait");
+                    pd.show();
+                    pd.setCancelable(false);
                     loginuser(email_txt,password_txt);
                 }
             }
@@ -88,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
+                        pd.dismiss();
                         Toast.makeText(LoginActivity.this,"You are successfully logged in",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                         finish();
@@ -97,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(LoginActivity.this,"Error : "+e.getMessage(),Toast.LENGTH_SHORT).show();
+                        pd.dismiss();
                     }
                 });
     }
