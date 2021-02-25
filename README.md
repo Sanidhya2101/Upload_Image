@@ -26,15 +26,17 @@ Welcome Page:
 
 Login Page:
 <div>
-  <img src="https://user-images.githubusercontent.com/58555534/109206049-6582bd00-77cd-11eb-884b-a5e5eced268d.jpg" alt="Standard Layout" height="700dp">
+  <img src="https://user-images.githubusercontent.com/58555534/109206049-6582bd00-77cd-11eb-884b-a5e5eced268d.jpg" alt="Login Page" height="700dp">
 </div>
 
 ---
 
 Signup Page:
 <div>
-  <img src="https://user-images.githubusercontent.com/58555534/109202858-78938e00-77c9-11eb-9997-0ccdaddf08f1.jpg" alt="Standard Layout" height="700dp">
+  <img src="https://user-images.githubusercontent.com/58555534/109206226-99f67900-77cd-11eb-93e4-caec089ca7b6.jpg" alt="SignUp Page" height="700dp">
 </div>
+
+---
 
 Homepage Page:
 <div>
