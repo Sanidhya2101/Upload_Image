@@ -41,7 +41,8 @@ Signup Page:
 Homepage Page:
 <div>
   <img src="https://user-images.githubusercontent.com/58555534/109206484-ed68c700-77cd-11eb-99bf-d74486366973.jpg" alt="Home Page" height="700dp">
-  <img src="https://user-images.githubusercontent.com/58555534/109206484-ed68c700-77cd-11eb-99bf-d74486366973.jpg" alt="Home Page" height="700dp">
+  
+  <img src="https://user-images.githubusercontent.com/58555534/109206516-f5286b80-77cd-11eb-81df-92d218f92e2a.jpg" alt="Home Page" height="700dp">
 </div>
 
 
