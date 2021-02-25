@@ -15,7 +15,7 @@ Started on 20 February 2021
 2.  Sign-up and Login Page with Firebase Email-password verification.
 2.  In Homepage one can upload Image and Store it in the firestore.
 
-##Screenshots
+## Screenshots
 
 Welcome Page:
 <div>
@@ -26,8 +26,10 @@ Welcome Page:
 
 Login Page:
 <div>
-  <img src="https://user-images.githubusercontent.com/58555534/109202858-78938e00-77c9-11eb-9997-0ccdaddf08f1.jpg" alt="Standard Layout" height="700dp">
+  <img src="https://user-images.githubusercontent.com/58555534/109206049-6582bd00-77cd-11eb-884b-a5e5eced268d.jpg" alt="Standard Layout" height="700dp">
 </div>
+
+---
 
 Signup Page:
 <div>
